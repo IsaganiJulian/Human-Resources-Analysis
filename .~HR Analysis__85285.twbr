@@ -2210,6 +2210,32 @@
       </devicelayouts>
       <simple-id uuid='{F522B707-C63F-415C-BAD6-1D4F48CC19CC}' />
     </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{E6519778-6932-45F3-9CF0-F9ED75C4A491}' />
+    </dashboard>
   </dashboards>
   <windows source-height='30'>
     <window class='worksheet' name='Engagement_Status'>
@@ -2679,7 +2705,7 @@
       </cards>
       <simple-id uuid='{7B13DC33-F3B6-43CA-9A30-CF230AF4F1E7}' />
     </window>
-    <window class='dashboard' maximized='true' name='Hiring and Termination Dashboard'>
+    <window class='dashboard' name='Hiring and Termination Dashboard'>
       <viewpoints>
         <viewpoint name='Month_Hire'>
           <zoom type='entire-view' />
@@ -2695,6 +2721,11 @@
       <active id='3' />
       <grid grid-overlay-mode='on' />
       <simple-id uuid='{D391E659-97F8-49D0-9AF8-6413EE227565}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{20931475-9FA0-4215-BA49-AC7BD9EAEE60}' />
     </window>
   </windows>
 </workbook>
