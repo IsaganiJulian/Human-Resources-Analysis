@@ -5,6 +5,7 @@
   <document-format-change-manifest>
     <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
     <DashboardGridOverlay />
     <IntuitiveSorting />
     <IntuitiveSorting_SP2 />
@@ -15,6 +16,7 @@
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
@@ -650,9 +652,14 @@
       <_.fcp.ObjectModelTableType.true...column caption='HR ANLYSIS.csv' datatype='table' name='[__tableau_internal_object_id__].[HR ANLYSIS.csv_076D8D29564241658BB6CEC8AFB6B4B4]' role='measure' type='quantitative' />
       <column-instance column='[Salary]' derivation='Avg' name='[avg:Salary:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Salary]' derivation='CountD' name='[ctd:Salary:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Date_of_Hire]' derivation='Day' name='[dy:Date_of_Hire:ok]' pivot='key' type='ordinal' />
       <column-instance column='[Department]' derivation='None' name='[none:Department:nk]' pivot='key' type='nominal' />
       <column-instance column='[Employment_Status]' derivation='None' name='[none:Employment_Status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Race_Desc]' derivation='None' name='[none:Race_Desc:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Recruitment_Source]' derivation='None' name='[none:Recruitment_Source:nk]' pivot='key' type='nominal' />
       <column-instance aggregation-param='25' column='[Salary]' derivation='Percentile' name='[prc25:Salary:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Date_of_Hire]' derivation='Quarter' name='[qr:Date_of_Hire:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Date_of_Hire]' derivation='Year' name='[yr:Date_of_Hire:ok]' pivot='key' type='ordinal' />
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
       <style>
         <style-rule element='mark'>
@@ -696,6 +703,223 @@
             </map>
             <map to='#f28e2b'>
               <bucket>&quot;Voluntarily Terminated&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Race_Desc:nk]' palette='sf_bluegrass' type='palette'>
+            <map to='#053661'>
+              <bucket>&quot;White&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;Two or more races&quot;</bucket>
+            </map>
+            <map to='#27aab0'>
+              <bucket>&quot;Hispanic&quot;</bucket>
+            </map>
+            <map to='#51d2bb'>
+              <bucket>&quot;Black or African American&quot;</bucket>
+            </map>
+            <map to='#94e7a8'>
+              <bucket>&quot;Asian&quot;</bucket>
+            </map>
+            <map to='#c7f296'>
+              <bucket>&quot;American Indian or Alaska Native&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Recruitment_Source:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;CareerBuilder&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Indeed&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Google Search&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;On-line Web application&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Employee Referral&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;LinkedIn&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Diversity Job Fair&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Website&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[dy:Date_of_Hire:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>31</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>27</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>28</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>24</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>29</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>30</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>26</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[yr:Date_of_Hire:ok]' palette='sf_bluegrass' type='palette'>
+            <map to='#053661'>
+              <bucket>2011</bucket>
+            </map>
+            <map to='#053661'>
+              <bucket>2017</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>2010</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>2016</bucket>
+            </map>
+            <map to='#27aab0'>
+              <bucket>2009</bucket>
+            </map>
+            <map to='#27aab0'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#51d2bb'>
+              <bucket>2008</bucket>
+            </map>
+            <map to='#51d2bb'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#94e7a8'>
+              <bucket>2007</bucket>
+            </map>
+            <map to='#94e7a8'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#c7f296'>
+              <bucket>2006</bucket>
+            </map>
+            <map to='#c7f296'>
+              <bucket>2012</bucket>
+            </map>
+            <map to='#c7f296'>
+              <bucket>2018</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[qr:Date_of_Hire:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>4</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -1396,6 +1620,123 @@
       </table>
       <simple-id uuid='{147EB475-AD91-4478-9C8F-2A3F528EACEA}' />
     </worksheet>
+    <worksheet name='Month_Hire'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#3faa13'>Hire By Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HR ANLYSIS' name='federated.05i7umj074r3sq1aiervp1dqhdzf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05i7umj074r3sq1aiervp1dqhdzf'>
+            <column caption='Date of Hire' datatype='date' name='[Date_of_Hire]' role='dimension' type='ordinal' />
+            <column caption='Emp ID' datatype='integer' name='[Emp_ID]' role='dimension' type='ordinal' />
+            <column-instance column='[Emp_ID]' derivation='CountD' name='[ctd:Emp_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date_of_Hire]' derivation='Month' name='[mn:Date_of_Hire:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' data-class='total' value='#000000' />
+            <format attr='color' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[mn:Date_of_Hire:ok]' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[mn:Date_of_Hire:ok]' value='#ffffff' />
+            <format attr='background-color' scope='rows' value='#f7faf0' />
+            <format attr='background-color' scope='cols' value='#eff3e3' />
+            <format attr='band-color' scope='cols' value='#eff3e3' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#eff3e3' />
+            <format attr='band-size' scope='cols' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-transparency' value='139' />
+                <format attr='mark-color' value='#3faa13' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05i7umj074r3sq1aiervp1dqhdzf].[ctd:Emp_ID:qk]</rows>
+        <cols>[federated.05i7umj074r3sq1aiervp1dqhdzf].[mn:Date_of_Hire:ok]</cols>
+      </table>
+      <simple-id uuid='{42A21F74-4787-4EA5-A550-B3DCA7680021}' />
+    </worksheet>
+    <worksheet name='Month_Term'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#3faa13'>Termination By Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HR ANLYSIS' name='federated.05i7umj074r3sq1aiervp1dqhdzf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05i7umj074r3sq1aiervp1dqhdzf'>
+            <column caption='Date of Term' datatype='date' name='[Date_of_Term]' role='dimension' type='ordinal' />
+            <column caption='Emp ID' datatype='integer' name='[Emp_ID]' role='dimension' type='ordinal' />
+            <column-instance column='[Emp_ID]' derivation='Count' name='[cnt:Emp_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date_of_Term]' derivation='Month' name='[mn:Date_of_Term:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Date_of_Term]' derivation='Year' name='[yr:Date_of_Term:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05i7umj074r3sq1aiervp1dqhdzf].[yr:Date_of_Term:ok]'>
+            <groupfilter from='2010' function='range' level='[yr:Date_of_Term:ok]' to='2018' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.05i7umj074r3sq1aiervp1dqhdzf].[yr:Date_of_Term:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[mn:Date_of_Term:ok]' value='52' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='band-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#eff3e3' />
+            <format attr='band-size' scope='cols' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#467f41' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05i7umj074r3sq1aiervp1dqhdzf].[cnt:Emp_ID:qk]</rows>
+        <cols>[federated.05i7umj074r3sq1aiervp1dqhdzf].[mn:Date_of_Term:ok]</cols>
+      </table>
+      <simple-id uuid='{60704048-F708-4EDC-A9E8-E926575C1FCD}' />
+    </worksheet>
     <worksheet name='Race_Location'>
       <layout-options>
         <title>
@@ -1430,8 +1771,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[Longitude (generated)]' field-type='quantitative' max='-7547318.8932597656' min='-13882484.584779112' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[Latitude (generated)]' field-type='quantitative' max='5559792.0869888496' min='3674587.0506139412' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[Longitude (generated)]' field-type='quantitative' max='3334148.0118516125' min='-22200239.684305437' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[Latitude (generated)]' field-type='quantitative' max='8114250.8451864887' min='1664388.1907008351' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='table'>
             <format attr='background-color' value='#eef1f3' />
@@ -1509,6 +1850,77 @@
       </table>
       <simple-id uuid='{4E21DB83-72C8-4ACC-B02F-29575CD930EB}' />
     </worksheet>
+    <worksheet name='Recruitment_Race'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#3faa13'>Recruitment Source and Race</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HR ANLYSIS' name='federated.05i7umj074r3sq1aiervp1dqhdzf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05i7umj074r3sq1aiervp1dqhdzf'>
+            <column caption='Race Desc' datatype='string' name='[Race_Desc]' role='dimension' type='nominal' />
+            <column caption='Recruitment Source' datatype='string' name='[Recruitment_Source]' role='dimension' type='nominal' />
+            <column-instance column='[Race_Desc]' derivation='Count' name='[cnt:Race_Desc:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Race_Desc]' derivation='None' name='[none:Race_Desc:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Recruitment_Source]' derivation='None' name='[none:Recruitment_Source:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Race_Desc:nk]'>
+            <groupfilter from='&quot;American Indian or Alaska Native&quot;' function='range' level='[none:Race_Desc:nk]' to='&quot;White&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Recruitment_Source:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;CareerBuilder&quot;</bucket>
+              <bucket>&quot;Diversity Job Fair&quot;</bucket>
+              <bucket>&quot;Employee Referral&quot;</bucket>
+              <bucket>&quot;Google Search&quot;</bucket>
+              <bucket>&quot;Indeed&quot;</bucket>
+              <bucket>&quot;LinkedIn&quot;</bucket>
+              <bucket>&quot;On-line Web application&quot;</bucket>
+              <bucket>&quot;Website&quot;</bucket>
+              <bucket>&quot;Other&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Race_Desc:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.05i7umj074r3sq1aiervp1dqhdzf].[cnt:Race_Desc:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#eff3e3' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Race_Desc:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Race_Desc:nk] / [federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Recruitment_Source:nk])</rows>
+        <cols>[federated.05i7umj074r3sq1aiervp1dqhdzf].[cnt:Race_Desc:qk]</cols>
+      </table>
+      <simple-id uuid='{E4D3852F-ABEF-48DA-8D35-F4228A92B878}' />
+    </worksheet>
     <worksheet name='Sheet 12'>
       <table>
         <view>
@@ -1529,9 +1941,53 @@
       </table>
       <simple-id uuid='{7E32E22F-C9F2-4867-BE92-92A8F2E5FBE7}' />
     </worksheet>
+    <worksheet name='Year_Employment'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#3faa13'>Employment By Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HR ANLYSIS' name='federated.05i7umj074r3sq1aiervp1dqhdzf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.05i7umj074r3sq1aiervp1dqhdzf'>
+            <column caption='Date of Hire' datatype='date' name='[Date_of_Hire]' role='dimension' type='ordinal' />
+            <column caption='Emp Status ID' datatype='integer' name='[Emp_Status_ID]' role='dimension' type='ordinal' />
+            <column-instance column='[Emp_Status_ID]' derivation='Count' name='[cnt:Emp_Status_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date_of_Hire]' derivation='Year-Trunc' name='[tyr:Date_of_Hire:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#eff3e3' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f1ce63' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.05i7umj074r3sq1aiervp1dqhdzf].[cnt:Emp_Status_ID:qk]</rows>
+        <cols>[federated.05i7umj074r3sq1aiervp1dqhdzf].[tyr:Date_of_Hire:qk]</cols>
+      </table>
+      <simple-id uuid='{312A444A-AB7E-4529-BF4C-188EA927DD49}' />
+    </worksheet>
   </worksheets>
   <dashboards>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 2'>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Diversity Dashboard'>
       <style />
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
@@ -1662,6 +2118,97 @@
         <zone h='11125' id='11' name='Act_Vol_Term_Avg_Salaries' pane-specification-id='0' param='[federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Employment_Status:nk]' type-v2='color' w='16100' x='83700' y='375' />
       </zones>
       <simple-id uuid='{EC3A257D-1D72-462C-BA4B-1C093837A246}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Hiring and Termination Dashboard'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#fff0b8' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='89500' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='9500'>
+            <zone h='89500' id='5' type-v2='layout-basic' w='98400' x='800' y='9500'>
+              <zone h='34704' id='3' name='Recruitment_Race' w='98400' x='800' y='64296'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='26125' id='9' param='horz' type-v2='layout-flow' w='98400' x='800' y='9500'>
+                <zone fixed-size='447' h='26125' id='10' is-fixed='true' name='Month_Hire' w='45500' x='800' y='9500'>
+                  <layout-cache minheight='184' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='26125' id='11' param='horz' type-v2='layout-flow' w='52900' x='46300' y='9500'>
+                  <zone h='26125' id='12' name='Month_Term' w='52900' x='46300' y='9500'>
+                    <layout-cache cell-count-w='12' minheight='215' non-cell-size-w='52' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='28671' id='13' param='vert' type-v2='layout-flow' w='98400' x='800' y='35625'>
+                <zone h='28671' id='14' name='Year_Employment' w='98400' x='800' y='35625'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='8500' id='15' type-v2='text' w='98400' x='800' y='1000'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#59a14f' fontsize='24'>Hiring and Termination Dashboard</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F522B707-C63F-415C-BAD6-1D4F48CC19CC}' />
     </dashboard>
   </dashboards>
   <windows source-height='30'>
@@ -2013,7 +2560,7 @@
       </cards>
       <simple-id uuid='{7142C9A5-7799-49FA-B2D1-DF15338B274F}' />
     </window>
-    <window class='dashboard' maximized='true' name='Dashboard 2'>
+    <window class='dashboard' name='Diversity Dashboard'>
       <viewpoints>
         <viewpoint name='Citizen_Sex'>
           <zoom type='entire-view' />
@@ -2031,6 +2578,123 @@
       <active id='7' />
       <grid grid-overlay-mode='on' />
       <simple-id uuid='{1828D3C2-9C8E-4E75-8E93-20E7D4A0512D}' />
+    </window>
+    <window class='worksheet' name='Recruitment_Race'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.05i7umj074r3sq1aiervp1dqhdzf].[none:Race_Desc:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F2EC412A-F3EC-40C2-B81B-3DDA557E7A1A}' />
+    </window>
+    <window class='worksheet' name='Year_Employment'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2869D730-07E4-409B-871E-6AC4198DA7BE}' />
+    </window>
+    <window class='worksheet' name='Month_Hire'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{B3EBD7FC-FE7A-4BEF-953F-893B3E57C949}' />
+    </window>
+    <window class='worksheet' name='Month_Term'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7B13DC33-F3B6-43CA-9A30-CF230AF4F1E7}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Hiring and Termination Dashboard'>
+      <viewpoints>
+        <viewpoint name='Month_Hire'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Month_Term'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Recruitment_Race' />
+        <viewpoint name='Year_Employment'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <grid grid-overlay-mode='on' />
+      <simple-id uuid='{D391E659-97F8-49D0-9AF8-6413EE227565}' />
     </window>
   </windows>
 </workbook>
